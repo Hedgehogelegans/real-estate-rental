@@ -20,13 +20,13 @@ const scrap = require("./scraper/scrap");
   });
 
   const page = await browser.newPage();
-
+  console.log("Browser created");
   // Then visit centris homepage
   await page.goto(
     "https://www.centris.ca/fr/propriete~a-louer~montreal?view=Thumbnail",
     { waitUntil: "networkidle2" }
   );
-
+  console.log("Visiting thumbmail");
   await page.waitForTimeout(5000);
   await page.setRequestInterception(true);
   await page.on("request", (req) => {
