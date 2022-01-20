@@ -1,9 +1,9 @@
 version: '3.4'
 
 services:
-  realestatesales:
-    container_name: real-estate-sales
-    image: realestatesales
+  realestaterental:
+    container_name: real-estate-rental
+    image: realestaterental
     build:
       context: .
       dockerfile: ./Dockerfile
